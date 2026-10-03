@@ -3,25 +3,26 @@
     "express": "^5.2.1",
     "nodemon": "^3.1.14"
   },
-  "name": "asd_bucket",
+  "name": "asd_workshop",
   "version": "1.0.0",
-  "description": "",
+  "description": "ASD Workshop product catalog service with caching and RESTful APIs",
   "main": "server.js",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-   "server":"nodemon server.js"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/siddhantthakur278-bit/ASD_BUCKET.git"
+    "url": "git+https://github.com/arshiyank-lab1/ASD_workshop.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["express", "cache", "rest-api", "asd-workshop"],
+  "author": "Mohammad Arshiyan",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/siddhantthakur278-bit/ASD_BUCKET/issues"
+    "url": "https://github.com/arshiyank-lab1/ASD_workshop/issues"
   },
-  "homepage": "https://github.com/siddhantthakur278-bit/ASD_BUCKET#readme"
+  "homepage": "https://github.com/arshiyank-lab1/ASD_workshop#readme"
 }
