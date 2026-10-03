@@ -3,8 +3,17 @@ const path = require('path');
 const filePath = path.join(__dirname, '..', 'db.json');
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 async function readData() {
-  const data = await fs.readFile(filePath, 'utf-8');
-  return JSON.parse(data);
+  try {
+    const data = await fs.readFile(filePath, 'utf-8');
+    return JSON.parse(data);
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      const defaultData = [];
+      await writeData(defaultData);
+      return defaultData;
+    }
+    throw error;
+  }
 }
 async function writeData(data) {
   await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8');
